@@ -40,6 +40,23 @@ THEN I am signed out of the site
 WHEN I am idle on the page for more than a set time
 THEN I am automatically signed out of the site 
 
+## Description 
+Tech Blog is a simple Content Management System type blog (CMS) that allows you to add, delete and edit tech related articles. To do this you must sign in with a pre existing account or create and new 
+account and sign up. It uses the MVC model to leverage Javascript, handlebars, sequelize, mysql2, and JAWSdb. 
+
+<img src="" alt="Application Overview" width="400"/>
+
+## Installation on Local Machine / Mobile Device 
+
+## how to use 
+
+Navigate the to the deployed application at https://t3ch-b1og.herokuapp.com/
+
+cycle thru the various options from creating a new post, to looking at previous posts, 
+adding comments and deleted posts. (not all functional)
+
+
+
 ## Technologies used 
 * express-handlebars 
 * MySQL2 
