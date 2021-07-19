@@ -17,8 +17,6 @@ const seedAll = async () => {
   await seedComments();
   console.log('--------------');
 
-  await seedVotes();
-  console.log('--------------');
 
   process.exit(0);
 };

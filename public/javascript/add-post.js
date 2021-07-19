@@ -1,24 +1,28 @@
+
 async function newFormHandler(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const title= document.querySelector('#post-title').value.trim();
-    const content= document.querySelector('#post-content').value.trim();
+  const title = document.querySelector("#post-title").value.trim();
+    const content = document.querySelector("#post-content").value.trim();
 
-    const response = await fetch(`/api/posts`,{
-        method: 'POST',
-        body: JSON.stringify({
+    if (title && content) {
+        fetch("/api/posts", {
+          method: "post",
+          body: JSON.stringify({
             title,
             content,
-        }),
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
-
-    if (response.ok) {
-        document.location.replace('/dashboard');
-    } else {
-        alert(response.statusText);
+          }),
+          headers: { "Content-Type": "application/json" },
+        }).then((response) => {
+          if (response.ok) 
+          {
+            document.location.replace("/dashboard/");
+          } 
+          else 
+          {
+            alert(response.statusText);
+          }
+        });
     }
 }
 
